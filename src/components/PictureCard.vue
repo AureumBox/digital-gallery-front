@@ -2,18 +2,19 @@
 import { Form } from '@primevue/forms';
 import { Button, Card, Divider, Image, InputText, Message, Panel } from 'primevue';
 import { defineComponent } from 'vue';
-import Comment from './Comment.vue';
+import CommentsSection from './CommentsSection.vue';
 
 export default defineComponent({
     components: {
         Card,
         Button,
-        Comment,
+        CommentsSection,
         Image
     },
     data() {
         return {
             liked: false as boolean,
+            likes: "0" as string,
             showComments: false as boolean
         }
     },
@@ -34,13 +35,14 @@ export default defineComponent({
             <div>
                 <Image class="picture" src="src\assets\pic.png" width="100%" preview />
             </div>
-            <div>
-                <Button :icon="liked ? 'pi pi-heart-fill' : 'pi pi-heart'" rounded variant="text" @click="toggleLike" />
+            <div class="interactions">
                 <Button icon="pi pi-comments" rounded variant="text" @click="toggleComments" />
+                <Button :label="likes" :icon="liked ? 'pi pi-heart-fill' : 'pi pi-heart'" rounded variant="text"
+                    @click="toggleLike" />
             </div>
             <Divider />
             <div v-if="showComments">
-                <Comment v-for="a in 4" />
+                <CommentsSection></CommentsSection>
             </div>
         </template>
     </Card>
@@ -51,7 +53,11 @@ export default defineComponent({
     display: flex;
     justify-content: center;
     margin: 10px;
-    width: 33%;
+    width: 30%;
+}
+
+.interactions {
+    text-align: right;
 }
 
 .picture {

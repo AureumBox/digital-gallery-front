@@ -1,11 +1,11 @@
 <script lang="ts">
-import { Divider, Panel } from 'primevue';
+import { Divider, Fieldset } from 'primevue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
     components: {
         Divider,
-        Panel
+        Fieldset
     },
     data() {
         return {
@@ -19,16 +19,12 @@ export default defineComponent({
 
 <template>
     <div>
-        <Panel header="Header" class="comment">
-            <p class="m-0">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        <Fieldset legend="Auri">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             </p>
-        </Panel>
+        </Fieldset>
     </div>
 </template>
 
-<style scoped>
-.comment {
-    margin: 5px;
-}
-</style>
+<style scoped></style>

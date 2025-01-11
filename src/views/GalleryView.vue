@@ -19,6 +19,6 @@ import PictureCard from '@/components/PictureCard.vue';
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
-    gap: 10px;
+    gap: 2px;
 }
 </style>

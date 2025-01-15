@@ -56,6 +56,7 @@ export default defineComponent({
     width: 30%;
 }
 
+
 .interactions {
     text-align: right;
 }

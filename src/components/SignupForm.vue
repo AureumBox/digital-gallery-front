@@ -29,6 +29,9 @@ export default defineComponent({
             <div class="form-field">
                 <InputText name="email" type="email" placeholder="Email" />
             </div>
+            <div class="form-field">
+                <InputText name="email" type="password" placeholder="Email" />
+            </div>
             <Button type="submit" label="Submit" class="submit-button" />
         </Form>
     </div>

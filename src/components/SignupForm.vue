@@ -30,7 +30,7 @@ export default defineComponent({
                 <InputText name="email" type="email" placeholder="Email" />
             </div>
             <div class="form-field">
-                <InputText name="email" type="password" placeholder="Email" />
+                <InputText name="password" type="password" placeholder="Password" />
             </div>
             <Button type="submit" label="Submit" class="submit-button" />
         </Form>
